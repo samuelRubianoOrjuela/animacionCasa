@@ -1,0 +1,185 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.container__fondo {
+    width: 100%;
+    filter: opacity(0.7);
+    transition: filter 0.5s ease-out;
+    transition-delay: 3.5s;
+}
+input {
+    display: none;
+}
+label {
+    position: absolute;
+    font-size: 20vw;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.2s ease-out;
+}
+.contador {
+    position: absolute;
+    height: 0vw;
+    width: 20vw;
+    top: 18%;
+    background-image: url(/images/3.png);
+    background-size: cover;
+    transition: 1s ease;
+}
+#boton:checked ~ label {
+    filter: opacity(0);
+}
+#boton:checked ~ .contador {
+    animation: conteo 3s ease 0.5s;
+}
+#boton:checked ~ .container__fondo {
+    filter: opacity(1);
+}
+
+@keyframes conteo {
+    10%{
+        height: 11vw;
+    }
+    17%{
+        background-image: url(/images/3.png);
+    }
+    27%{
+        background-image: url(/images/2.png);
+    }
+    48%{
+        background-image: url(/images/2.png);
+    }
+    58%{
+        background-image: url(/images/1.png);
+    }
+    90%{
+        height: 11vw;
+    }
+    100%{
+        background-image: url(/images/1.png);
+        height: 0;
+        display: none;
+    }
+}
+
+.nube{
+    position: fixed;
+    width: 25%;
+    height: 25%;
+    z-index: 3;
+    background-image: url(/images/nube.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 2%;
+    right: -25%;
+    opacity: 0;
+}
+
+#boton:checked ~ .nube{
+    animation: movNube 12s linear 4s ;
+    animation-fill-mode: forwards
+}
+@keyframes movNube {
+    1%{
+        opacity: 1;
+    }
+    17%{
+        opacity: 1;
+        right: 45%;
+    }
+    67%{
+        right: 45%;
+    }
+    90%{
+        right: 100%;
+    }
+    100%{
+        right: 100%;
+        opacity: 1;
+        display: none;
+    }
+}
+
+/* @keyframes irNube {
+    100%{
+        left: -25%;
+    }
+} */
+.lluvia{
+    position: fixed;
+    width: 25%;
+    height: 0%;
+    overflow: hidden;
+    background-image: url(/images/lluvia.png);
+    background-repeat: no-repeat;
+    top: 6%;
+    right: 38%;
+}
+#boton:checked ~ .lluvia{
+    animation: llover 4s linear 7s forwards;
+}
+ @keyframes llover {
+    50%{
+        height: 28%;
+    }
+    60%{
+        height: 28%;
+    }
+    100%{
+        height: 0%;
+        top: 32%;
+    }
+}
+
+.sol{
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    background-image: url(/images/sol.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 1%;
+    right: 20%;
+    filter: opacity(0.7);
+    transition: 1s;
+    transition-delay: 14s;
+}
+#boton:checked ~ .sol{
+    filter: opacity(1);
+}
+
+.flor {
+    position: absolute;
+    bottom: 51%;
+    right: 52%;
+    width: 10%;
+    height: 0%;
+    visibility: hidden;
+    background-image: url(/images/flor.png);
+    background-size: 100% ;
+    background-repeat: no-repeat;
+    transition: 2s linear;
+    transition-delay: 15s;
+}
+
+#boton:checked ~ .flor {
+    visibility: visible;
+    height: 18%;
+}
+.texto {
+    position: absolute;
+    font-size: 4vw;
+    color:navy;
+    top: 1%;
+    left: 4%;
+    opacity: 0;
+    transition: 1s;
+    transition-delay: 18s;
+}
+
+#boton:checked ~ .texto {
+    opacity: 1;
+}
