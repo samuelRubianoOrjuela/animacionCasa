@@ -25,7 +25,7 @@ label {
     height: 0vw;
     width: 20vw;
     top: 18%;
-    background-image: url(/images/3.png);
+    background-image: url(images/3.png);
     background-size: cover;
     transition: 1s ease;
 }
@@ -44,22 +44,22 @@ label {
         height: 11vw;
     }
     17%{
-        background-image: url(/images/3.png);
+        background-image: url(images/3.png);
     }
     27%{
-        background-image: url(/images/2.png);
+        background-image: url(images/2.png);
     }
     48%{
-        background-image: url(/images/2.png);
+        background-image: url(images/2.png);
     }
     58%{
-        background-image: url(/images/1.png);
+        background-image: url(images/1.png);
     }
     90%{
         height: 11vw;
     }
     100%{
-        background-image: url(/images/1.png);
+        background-image: url(images/1.png);
         height: 0;
         display: none;
     }
@@ -70,7 +70,7 @@ label {
     width: 25%;
     height: 25%;
     z-index: 3;
-    background-image: url(/images/nube.png);
+    background-image: url(images/nube.png);
     background-size: 100%;
     background-repeat: no-repeat;
     top: 2%;
@@ -113,7 +113,7 @@ label {
     width: 25%;
     height: 0%;
     overflow: hidden;
-    background-image: url(/images/lluvia.png);
+    background-image: url(images/lluvia.png);
     background-repeat: no-repeat;
     top: 6%;
     right: 38%;
@@ -138,7 +138,7 @@ label {
     position: absolute;
     width: 25%;
     height: 25%;
-    background-image: url(/images/sol.png);
+    background-image: url(images/sol.png);
     background-size: 100%;
     background-repeat: no-repeat;
     top: 1%;
@@ -158,7 +158,7 @@ label {
     width: 10%;
     height: 0%;
     visibility: hidden;
-    background-image: url(/images/flor.png);
+    background-image: url(images/flor.png);
     background-size: 100% ;
     background-repeat: no-repeat;
     transition: 2s linear;
